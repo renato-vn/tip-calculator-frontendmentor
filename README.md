@@ -37,7 +37,7 @@ This app makes splitting a bill among friends or family straightforward and tran
 
 ## Tech Stack
 
-**Frontend:** Built with React, Zustand for state management, and TailwindCSS for styling.
+**Frontend:** Built with React, TypeScript, Zustand for state management, and TailwindCSS for styling.
 
 ##
 
