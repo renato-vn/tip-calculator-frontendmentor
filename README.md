@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Tip and Bill Split Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app helps you fairly split a restaurant bill between multiple people, including customizable tip calculations.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app features two main inputs:
 
-## React Compiler
+Bill: The total amount of the bill.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Number of People: How many people will be splitting the bill.
 
-## Expanding the ESLint configuration
+You can select the tip percentage using predefined tip buttons or choose the Custom button to enter any tip value you want. When you click the Custom button, it transforms into an input field where you can type your preferred tip. The tip amount updates as soon as you press Enter or click outside the input field (blur event).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- _Input validation for bill and people count._
+- _Quick-select tip buttons for common percentages._
+- _Custom tip input with live update on Enter or blur._
+- _Clear totals display showing per-person tip and total owed.-_
+- _Reset button to clear all inputs and start fresh._
+- _Responsive design and visual icons for better UX._
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Usage
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.- Type in the total bill amount.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.- Choose the tip percentage or customize it.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.- Enter the number of people to split the bill.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.- View the per-person tip and total amount owed.
+
+5.- Use Reset to clear and recalculate as needed.
+
+This app makes splitting a bill among friends or family straightforward and transparent, with flexible tip options customizable to any situation.
+
+## Tech Stack
+
+**Frontend:** Built with React, Zustand for state management, and TailwindCSS for styling.
+
+##
+
+Enjoy easily calculating your share of the bill!
